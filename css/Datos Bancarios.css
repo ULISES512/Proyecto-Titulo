@@ -1,0 +1,175 @@
+.header {
+    background-color: rgb(122, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 66px;
+    padding: 5px 5px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+    box-sizing: border-box;
+    animation: visibility 0.7s;
+  }
+  .header .logo a img{
+    width: 120px;
+  }
+  
+  .header .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+  }
+  
+  .header .nav-links li {
+    display: inline-block;
+    padding: 0px 20px;
+  }
+  
+  .header .nav-links li a {
+     animation: visibility 0.7s;
+    font-size: 15px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-family: "Reddit Sans Condensed", sans-serif;
+    transition: all 0.3s;
+    padding: 0px 4px;
+  }
+  
+  .menu-icon {
+    display: none;
+    position: absolute;
+    top: 12px;
+    right: 25px;
+    cursor: pointer;
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+  }
+  
+  #menu-toggle {
+    display: none;
+  }
+  * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+  text-align: center;
+  padding-top: 0px;
+}
+.datos-bancarios {
+  background: linear-gradient(135deg, #ffffff, #ffffff00);
+  padding: 30px 30px;
+  margin-top: 40px;
+  border-radius: 12px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease-in-out;
+  max-width: 1400px;
+}
+
+
+.datos-bancarios h2 {
+  color: #800000;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.datos-bancarios h3 {
+  color: #660000;
+  margin-top: 25px;
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.datos-bancarios ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 25px;
+}
+
+.datos-bancarios li {
+  margin-bottom: 10px;
+  padding-left: 24px;
+  position: relative;
+  color: #222;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.datos-bancarios li::before {
+  content: "💳";
+  position: absolute;
+  left: 30%;
+  top: 2px;
+}
+
+.datos-bancarios p {
+  margin-bottom: 18px;
+  line-height: 1.7;
+  font-size: 19.5px;
+  color: #000000;
+}
+
+.datos-bancarios .aviso {
+  background-color: #ffefef;
+
+  padding: 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: #aa0000;
+  margin-top: 20px;
+  animation: pulse 1s ease-in-out infinite alternate;
+}
+
+@keyframes pulse {
+  from { background-color: #ffefef; }
+  to { background-color: #ffe5e5; }
+}
+
+
+@media (max-width: 768px) {
+    .header .nav-links li a{
+        font-size: 20px;
+    }
+ body {
+    padding-top: 80px;
+  }
+  .header .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 66px;
+    left: 0;
+    padding: 25px;
+    width: 100%;
+ background-color: rgba(0, 0, 0, 0.649);
+     text-align: center;
+  }
+
+  .header .nav-links li {
+    display: block;
+    
+    padding: 30px 0;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  #menu-toggle:checked ~ nav .nav-links {
+    display: flex;
+  }
+  .datos-bancarios li::before {
+  content: "💳";
+  position: absolute;
+  left: 0%;
+  top: 2px;
+}
+}
