@@ -1,0 +1,97 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/Doc_Inscripcion.css">
+        <link rel="stylesheet" href="../css/links.css">
+
+    <title>Proceso de Admision</title>
+</head>
+<body>
+       <header class="header">
+        <div class="logo">
+            <a href="../index.html" title="Centro de Estudios Tecnológicos Industriales y de Servicios 104" class="logo"><img src="../img/Logo Del cetis.png" alt=""></a>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <nav>
+            <ul class="nav-links">
+                
+                <li><a href="../pages/Doc_Admin.html" title="Examen De Admision">Examen de Admision</a></li>
+                <li><a href="../pages/Doc_Inscrip.html" title="Convocatoria de Inscipciones" >Convocatoria de Inscipciones</a></li>
+                <li>  <a href="../pages/Reinscripcion.html" title="">Reinscripción</a></li>
+                <li>
+                    <a href="../pages/Datos Bancarios.html" title="Datos Bancarios">Datos Bancarios</a>
+                </li>
+                 <li>
+<a href="mailto:ximenatlacomulco024@gmail.com?subject=Duda%20sobre%20el%20proceso%20de%20admisión&body=Hola,%20tengo%20una%20duda%20sobre... " title="Contáctanos mediante un correo electrónico">Contáctanos</a>
+                </li>
+                 <li>
+                    <a href="../pages/Requisitos.html" title="Requisitos">Requisitos</a>
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
+                 <li> 
+                    <a href="#"></a>
+                </li>
+            </ul> 
+        </nav>
+    </header>
+
+ 
+
+
+
+      <form class="form" method="POST" id="form_inscripcion" action="../php/Doc_Inscrip.php" enctype="multipart/form-data">
+    <h2 class="title">Inscripciones 2026</h2>
+
+    <div class="form-group">
+        <label>Nombre Completo</label>
+        <input required type="text" class="input" name="Nombre" placeholder="Nombre completo del aspirante"/>
+    </div>
+
+    <div class="form-group">
+        <label>Comprobante de pago</label>
+        <input required type="file" class="input" name="Comprobante_Pago" accept=".pdf"/>
+    </div>
+
+    <div class="form-group">
+        <label>Carta de Declaración</label>
+        <input required type="file" class="input" name="Carta_Decla" accept=".pdf"/>
+    </div>
+
+    <div class="form-group">
+        <label>INE del padre, madre o tutor</label>
+        <input required type="file" class="input" name="INE" accept=".pdf"/>
+    </div>
+
+    <div class="form-group">
+        <label>Comprobante de Domicilio</label>
+        <input required type="file" class="input" name="Comprobante_Domicilio" accept=".pdf"/>
+    </div>
+
+    <div class="form-group">
+        <label>CURP (Clave Única de Registro de Población)</label>
+        <input required type="file" class="input" name="Curp" accept=".pdf"/>
+    </div>
+
+    <button class="submit">Enviar Solicitud</button>
+</form>
+
+
+    
+
+
+
+
+
+   
+</body>
+</html>

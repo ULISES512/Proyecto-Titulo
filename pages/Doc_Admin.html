@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../css/Examen_Formulario.css" />
+  <link rel="stylesheet" href="../css/header.css" />
+      <link rel="stylesheet" href="../css/links.css">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+  <title>Examen De Admision</title>
+</head>
+         <header class="header">
+        <div class="logo">
+          <a href="../index.html" title="Centro de Estudios Tecnológicos Industriales y de Servicios 104" class="logo"><img src="../img/Logo Del cetis.png" alt=""></a>
+        </div>
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+        <nav>
+            <ul class="nav-links">                
+                <li><a href="../pages/Doc_Admin.html" title="Examen De Admision">Examen de Admision</a></li>
+                <li><a href="../pages/Doc_Inscrip.html" title="Convocatoria de Inscipciones">Convocatoria de Inscipciones</a></li>
+                <li>  <a href="../pages/Reinscripcion.html" title="">Reinscripción</a></li>
+                <li><a href="../pages/Datos Bancarios.html" title="Datos Bancarios">Datos Bancarios</a></li>
+                <li><a href="mailto:ximenatlacomulco024@gmail.com?subject=Duda%20sobre%20el%20proceso%20de%20admisión&body=Hola,%20tengo%20una%20duda%20sobre... " title="Contáctanos mediante un correo electrónico">Contáctanos</a></li>
+                <li><a href="../pages/Requisitos.html" title="Requisitos">Requisitos</a></li>
+                <li><a href="#"></a></li>
+                 <li><a href="#"></a></li>
+            </ul> 
+        </nav>
+    </header>
+<body>
+<form action="../php/Doc_Admin.php" method="post" id="form_admision" enctype="multipart/form-data">
+
+  <!-- Encabezado movido aquí -->
+  <div class="form-header">
+    <h2>Examen de Admisión 2026</h2>
+    <p>Recuerda que tus documentos deben cumplir con los requisitos; de no ser así, no serán aceptados.</p>
+  </div>
+
+  <label for="Acta">Acta De Nacimiento</label>
+  <input type="file" name="Acta" id="Acta" accept=".pdf" required>
+
+  <label for="Curp">CURP</label>
+  <input type="file" name="Curp" id="Curp" accept=".pdf" required>
+
+  <label for="Certificado">Certificado de Secundaria</label>
+  <input type="file" name="Certificado" id="Certificado" accept=".pdf" required>
+
+  <label for="Comprobante">Comprobante de Domicilio</label>
+  <input type="file" name="Comprobante" id="Comprobante" accept=".pdf" required>
+
+  <label for="Foto">Fotografía Infantil</label>
+  <input type="file" name="Foto" id="Foto" accept=".jpg" required>
+
+  <label for="Tel_Casa">Teléfono de Casa</label>
+  <input type="tel" name="Tel_Casa" id="Tel_Casa" placeholder="Ejemplo: +52 2221234567" pattern="[0-9]{10}" required>
+
+  <label for="Tel_Tutor">Teléfono del padre, madre o tutor</label>
+  <input type="tel" name="Tel_Tutor" id="Tel_Tutor" placeholder="Ejemplo: +52 2221234567" pattern="[0-9]{10}" required>
+
+  <label for="Correo">Correo Electrónico</label>
+  <input type="email" name="Correo" id="Correo" placeholder="@gmail, @outlook, @hotmail" required>
+
+  <label for="especialidad1">Opción 1 de Especialidad</label>
+  <select id="especialidad1" name="especialidad1" required></select>
+
+  <label for="especialidad2">Opción 2 de Especialidad</label>
+  <select id="especialidad2" name="especialidad2" required></select>
+
+  <label for="especialidad3">Opción 3 de Especialidad</label>
+  <select id="especialidad3" name="especialidad3" required></select>
+
+  <label for="Carta_Conf">Carta de Conformidad</label>
+  <input type="file" name="Carta_Conf" id="Carta_Conf" accept=".pdf" required>
+
+  <label for="Carta_Ver">Carta de Veracidad</label>
+  <input type="file" name="Carta_Ver" id="Carta_Ver" accept=".pdf" required>
+
+
+<script>
+  
+   const selects = [
+    document.getElementById('especialidad1'),
+    document.getElementById('especialidad2'),
+    document.getElementById('especialidad3')
+  ];
+
+   const opciones = [
+    { value: "programacion", text: "Programacion" },
+    { value: "mecatronica", text: "Mecatronica" },
+    { value: "laboratorista quimico", text: "Laboratorista Quimico" },
+    { value: "contabilidad", text: "Contabilidad" },
+    { value: "mecanica industrial", text: "Mecanica Industrial" },
+    { value: "soporte", text: "Soporte de Mantenimiento" },
+    { value: "ia", text: "Inteligencia Artificial" }
+  ];
+
+  function actualizarOpciones() {
+    const seleccionadas = selects.map(s => s.value);
+
+    selects.forEach((select, index) => {
+      const valorActual = select.value;
+
+      select.innerHTML = '<option value="">-- Selecciona una opción --</option>';
+      opciones.forEach(op => {
+        if (!seleccionadas.includes(op.value) || op.value === valorActual) {
+          const option = document.createElement('option');
+          option.value = op.value;
+          option.textContent = op.text;
+          if (op.value === valorActual) option.selected = true;
+          select.appendChild(option);
+        }
+      });
+    });
+  }
+
+  selects.forEach(select => {
+    select.addEventListener('change', actualizarOpciones);
+  });
+
+  actualizarOpciones();
+</script>
+
+    <button type="submit">Enviar Documentos</button>
+  </form>
+    
+</body>
+
+
+</html>

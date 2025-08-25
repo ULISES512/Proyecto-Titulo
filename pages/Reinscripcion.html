@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/Reinscripcion.css" />
+    <link rel="stylesheet" href="../css/header.css">
+        <link rel="stylesheet" href="../css/links.css">
+        <link rel="stylesheet" href=../css/Reinscripcion.css>">
+
+    <title>Reinscripción</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="../index.html" title="Centro de Estudios Tecnológicos Industriales y de Servicios 104"
+                class="logo"><img src="../img/Logo Del cetis.png" alt="" /></a>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+        <nav>
+            <ul class="nav-links">
+                <li>
+                    <a href="../pages/Doc_Admin.html" title="Examen De Admision">Examen de Admision</a>
+                </li>
+                <li>
+                    <a href="../pages/Doc_Inscrip.html" title="Convocatoria de Inscipciones">Convocatoria de
+                        Inscipciones</a>
+                </li>
+                <li>
+                    <a href="../pages/Datos Bancarios.html" title="Datos Bancarios">Datos Bancarios</a>
+                </li>
+                <li>
+                    <a href="mailto:ximenatlacomulco024@gmail.com?subject=Duda%20sobre%20el%20proceso%20de%20admisión&body=Hola,%20tengo%20una%20duda%20sobre... "
+                        title="Contáctanos mediante un correo electrónico">Contáctanos</a>
+                </li>
+                <li>
+                    <a href="../pages/Requisitos.html" title="Requisitos">Requisitos</a>
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
+                <li>
+                    <a href="#"></a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+</body>
+<br><br><br><br><br><br><br><br><b><br><b></b></b>
+<div class="form-container">
+  <h2 class="form-title">Reinscripción de Alumnos</h2>
+  
+  <form action="../php/Doc_Reins.php" method="post" enctype="multipart/form-data" id="Form-Doc-Reins">
+        <label for="Comprobante">Comprobante de Pago</label>
+        <input type="file" name="Comprobante" id="Comprobante" accept=".pdf" required />
+
+        <label for="Carta_Prot">Carta Bajo Protesta</label>
+        <input type="file" name="Carta_Prot" id="Carta_Prot" accept=".pdf" required />
+
+        <label for="No_Control">Número de Control</label>
+        <input type="text" name="No_Control" id="No_Control" placeholder="Número de control del alumno" required pattern="[0-9]{10}"/>
+
+        <label for="Curp">Curp</label>
+        <input type="file" name="Curp" id="Curp" accept=".pdf" required />
+
+        <label for="Nombre">Nombre</label>
+        <input type="text" name="Nombre" id="Nombre" placeholder="Nombre" required />
+
+        <label for="Apellido_Paterno">Apellido Paterno</label>
+        <input type="text" name="Apellido_Paterno" id="Apellido_Paterno" placeholder="Apellido Paterno" required />
+
+        <label for="Apellido_Materno">Apellido Materno</label>
+        <input type="text" name="Apellido_Materno" id="Apellido_Materno" placeholder="Apellido Materno" required />
+
+        <label for="Semestre">Semestre a reinscribir</label>
+        <select name="Semestre" id="Semestre" required>
+            <option value="">--Semestre--</option>
+            <option value="1">1er Semestre</option>
+            <option value="2">2do Semestre</option>
+            <option value="3">3er Semestre</option>
+            <option value="4">4to Semestre</option>
+            <option value="5">5to Semestre</option>
+            <option value="6">6to Semestre</option>
+        </select>
+
+        <button type="submit">Mandarlos</button>
+  </form>
+</div>
+
+
+</html>

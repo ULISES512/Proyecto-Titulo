@@ -1,0 +1,115 @@
+   * {
+      box-sizing: border-box;
+      color: white;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url(../img/FotoFichas2-1200x646.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    form {
+      padding: 2rem;
+      width: 100%;
+      margin-top: 350px;
+      max-width: 1200px;
+ --color: #e1e1e137;
+  background-color: #6000005f;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+      linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+  background-size: 55px 55px;
+      border-radius: 40px;
+}
+    h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #ffffff;
+    }
+
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    input[type="file"],
+    input[type="tel"],
+    input[type="email"],
+    select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    input:focus,
+    select:focus {
+      border-color: #ff0000;
+      outline: none;
+    }
+
+    button {
+      margin-top: 2rem;
+      padding: 12px;
+      width: 100%;
+      background-color: #740000;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #de4444;
+    }
+   
+    .Suggestion{
+      padding: 2rem;
+      width: 100%;
+      position: absolute;
+      top: -10%;
+      left: 0%;
+      background: repeating-radial-gradient(circle, #ff000090, #a6000097 5px, #000 6px);
+      background-size: 50px 100px;
+      margin-top: 100px;
+    }
+    .Suggestion h1 {
+      text-align: center;
+      color: #ffffff;
+      font-size: 50px
+    }
+    .Suggestion p {
+      text-align: center;
+      color: #ffffff;
+      font-size: 25px;
+      margin-top: 10px;
+    }
+    @media (max-width: 500px) {
+      form {
+        padding: 1.5rem;
+      }
+      .Suggestion h1{
+        font-size: 30px;
+      }
+      .Suggestion p{
+        font-size: 25px;
+      }
+      form{
+        margin-top: 270px;
+      }
+    }

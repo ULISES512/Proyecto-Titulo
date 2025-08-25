@@ -1,0 +1,75 @@
+*{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.form-container {
+  max-width: 1280px;
+  margin: 40px auto;
+  padding: 25px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.form-title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: #800000; /* rojo vino */
+  font-weight: bold;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #800000;
+  box-shadow: 0 0 5px rgba(128,0,0,0.5);
+}
+
+button {
+  background: #800000;
+  color: #fff;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #a00000;
+}
+
+@media (max-width: 600px) {
+  .form-container {
+    padding: 15px;
+  }
+
+  .form-title {
+    font-size: 1.5rem;
+  }
+
+  input, select, button {
+    font-size: 0.9rem;
+  }
+}
